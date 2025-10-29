@@ -32,6 +32,8 @@ cp backend/.env.example backend/.env
 docker compose up --build
 ```
 
+> **Dica:** o `docker-compose.yml` já força `DB_HOST=db` para a API, então não é necessário editar o arquivo `.env` para o modo container.
+
 Serviços disponíveis:
 
 - API: http://localhost:3333/api
@@ -45,6 +47,7 @@ Serviços disponíveis:
    ```bash
    cd backend
    cp .env.example .env
+   # garanta que DB_HOST=localhost para acessar o PostgreSQL local
    npm install
    npm run dev
    ```
