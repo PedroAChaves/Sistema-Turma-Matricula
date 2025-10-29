@@ -17,5 +17,13 @@ export const createApp = () => {
 
   app.get('/health', (_req, res) => res.json({ status: 'ok' }));
 
+  app.get('/', (_req, res) => {
+    res.json({
+      message: 'Sistema de Turma e Matrícula API',
+      docs: '/docs',
+      api: '/api',
+    });
+  });
+
   return app;
 };
