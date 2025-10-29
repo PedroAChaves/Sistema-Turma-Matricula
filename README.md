@@ -49,9 +49,11 @@ Serviços disponíveis:
    cp .env.example .env
    # garanta que DB_HOST=localhost para acessar o PostgreSQL local
    npm install
+   # execute o PostgreSQL localmente ou suba apenas o serviço de banco com Docker
+   docker compose up -d db
    npm run dev
    ```
-   A API sobe na porta definida em `PORT` (padrão 3333).
+   A API sobe na porta definida em `PORT` (padrão 3333). Caso o banco não esteja acessível será exibida uma mensagem com dicas de configuração.
 
 2. **Frontend**
    ```bash
