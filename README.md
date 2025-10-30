@@ -39,7 +39,7 @@ Serviços disponíveis:
 - API: http://localhost:3333/api
 - Swagger: http://localhost:3333/docs
 - Frontend: http://localhost:5173
-- Banco de dados PostgreSQL: porta 5432 (acessível via clientes como DBeaver, TablePlus ou `psql`; não responde a requisições HTTP)
+- Banco de dados PostgreSQL: porta 5432
 
 ### Execução manual (sem Docker)
 
@@ -103,15 +103,12 @@ O workflow `.github/workflows/ci.yml` realiza automaticamente:
 2. **Publicação** do frontend no GitHub Pages (branch `main`) usando o token `GH_PAGES_TOKEN`.
 3. **Build** e push da imagem do backend para o GitHub Container Registry (`ghcr.io`).
 
-Adapte as variáveis/segredos no repositório GitHub para finalizar a configuração.
-
-## 📝 Próximos passos sugeridos
-
-- Implementar testes automatizados (unitários e de integração).
-- Criar seeds automáticos para perfis de demonstração.
-- Expandir o módulo de matrículas com boletos, presença e certificados.
-- Adicionar controle de permissões baseado no `role` do usuário.
-
 ---
 
-Projeto desenvolvido por **Turma A - Desenvolvimento Framework II**.
+Projeto desenvolvido por **Grupo Trabalho 1 - Turma A - Desenvolvimento Framework II**.
+
+Integrantes: 
+
+1. Gabriel Luís Lopes – RA. 2300873
+2. Lucas Timponi Mercadante Castro – RA. 2304913
+3. Pedro Alexandre Dos Santos Chaves – RA. 2301503
