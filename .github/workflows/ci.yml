@@ -66,9 +66,12 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Normalize repository name
+        id: repo
+        run: echo "value=${GITHUB_REPOSITORY,,}" >> "$GITHUB_OUTPUT"
       - name: Build and push image
         uses: docker/build-push-action@v5
         with:
           context: ./backend
           push: true
-          tags: ghcr.io/${{ github.repository }}/api:latest
+          tags: ghcr.io/${{ steps.repo.outputs.value }}/api:latest
