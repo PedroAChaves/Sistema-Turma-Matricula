@@ -12,7 +12,7 @@ export const authenticate = (req, res, next) => {
     const decoded = verifyToken(token);
     req.user = decoded;
     return next();
-  } catch (error) {
+  } catch {
     return res.status(401).json({ message: 'Token inválido' });
   }
 };
