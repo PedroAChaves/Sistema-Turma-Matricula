@@ -39,7 +39,7 @@ Serviços disponíveis:
 - API: http://localhost:3333/api
 - Swagger: http://localhost:3333/docs
 - Frontend: http://localhost:5173
-- Banco de dados PostgreSQL: porta 5432
+- Banco de dados PostgreSQL: porta 5432 (acessível via clientes como DBeaver, TablePlus ou `psql`; não responde a requisições HTTP)
 
 ### Execução manual (sem Docker)
 
